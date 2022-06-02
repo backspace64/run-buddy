@@ -47,16 +47,9 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.55vw;
 }
-
-.intro {
-
-    text-align: center;
-}
-
 .intro h2 {
     /*add this alongside your other declarations*/
 display: inline-block;
-
 }
 
 .intro h2 {
@@ -72,6 +65,7 @@ display: inline-block;
 .intro p {
 /* add this alongside your other declarations*/
 margin: 0 auto;
+text-align: center;
 }
 
 .intro p {
@@ -82,7 +76,6 @@ margin: 0 auto;
 }
 
 .steps {
-    text-align: center;
     background: #fce138;
 }
 
@@ -199,11 +192,13 @@ section {
 }
 .section-title {
     font-size: 55px;
-    display: inline-block;
-    padding: 0 100px 20px 100px;
     border-bottom: 3px solid;
-    margin-bottom: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
+
 
 .primary-border {
     border-color: #fce138;
@@ -212,39 +207,35 @@ section {
 .secondary-border {
     border-color: #024e76;
 }
-/*remove this entire CSS rule*/
-.steps h2 
 
-
-/* and this one*/
-.steps h2 
-
-
-
-.steps span {
-    font-size: 38px;
+.step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.steps div{
-    margin-bottom: 80px;
-}
-
-.steps img {
-    width: 15%;
-    margin: 10px 0;
-}
-
-.steps h3 {
+.step h3 {
     color:#39a6b2;
 }
 
-.steps p {
+.step-text p {
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px;
+    flex: 12;
+}
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
 }
 
-.trainers {
-    text-align: center;
+.step-text img {
+max-width: 100%;
 }
 
 .trainers {
@@ -291,7 +282,6 @@ section {
 /* REACH OUT STYLES START */
 
 .contact {
-    text-align: center;
     background: #024e76;
 }
 
@@ -310,4 +300,7 @@ section {
     text-align: left;
     margin: 30px 0 0 60px;
     color: white;
+}
+.flex-row {
+    display: flex;
 }
