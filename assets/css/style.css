@@ -1,10 +1,15 @@
+* {
+     box-sizing: border-box
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    /*more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* apply styles to <header> */
+/* HEADER / NAV STYLES START */
 
 header {
     padding: 20px 35px;
@@ -43,10 +48,12 @@ header nav ul {
 }
 
 header nav ul li a {
-    margin: 0 30px;
+    padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
 }
+/* HEADER / NAV BAR STYLES END*/
+
 .intro h2 {
     /*add this alongside your other declarations*/
 display: inline-block;
@@ -98,6 +105,7 @@ position: relative;
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
+align-items: flex-start;
 }
 
 .hero-cta {
@@ -106,7 +114,7 @@ flex-wrap: wrap;
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -159,6 +167,7 @@ margin: 0;
 }
 /*Hero Style End*/ 
 
+/* FOOTER STYLE STARTS*/
 footer {
   background: #fce138;
   width: 100%;
@@ -185,13 +194,14 @@ footer a {
   color: #024e76;
 
 }
+/* FOOTER STYLES END*/
 
 section {
 
     padding: 60px;
 }
 .section-title {
-    font-size: 55px;
+    font-size: 48px;
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -331,7 +341,7 @@ font-style: normal;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+/* UTLITIES */
 .text-left {
     text-align: left;
 }
@@ -342,3 +352,112 @@ font-style: normal;
 .flex-row {
     display: flex;
 }
+ 
+/* MEDIA QUERY FOR SMALLSCREENS AND SMALLER*/
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0;
+        justify-content: center;
+}
+
+header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+header nav ul{
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+header nav ul li a {
+    font-size: 20px;
+}
+
+footer h2, footer div {
+    text-align: center;
+    width: 100%;
+}
+
+
+.hero-cta, .hero-form {
+    width: 100%;
+}
+
+.hero-cta {
+    text-align: center;
+}
+
+.section-title {
+    width: 80%;
+}
+
+.trainer {
+    flex: 0 70%;
+}
+
+.contact-info iframe {
+    flex: 1 100%
+} 
+}
+
+/* MEDIA QUERYS FOR TABLETS AND SMALLER*/
+@media screen and (max-width: 768) {
+    section {
+        padding: 30px 15px;
+    }
+    
+    .step h3 {
+        flex: 1 100%
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+}
+
+/* MEDIA QUERYS FOR MOBILE PHONES AND SMALLER*/
+@media screen and (max-width: 575px) {
+    .hero-form button {
+      width: 100%;
+    }
+  
+    .section-title {
+      width: 95%;
+    }
+  
+    .intro p {
+      width: 100%;
+    }
+  
+    .trainer {
+      flex: 0 100%;
+    }
+  
+    .contact-info {
+      text-align: center;
+    }
+  
+    .contact-info > * {
+      flex: 0 100%;
+    }
+
+    .contact-form {
+        order: 3;
+    }
+  }
